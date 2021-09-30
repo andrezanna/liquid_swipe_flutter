@@ -377,13 +377,19 @@ class _LiquidSwipe extends State<LiquidSwipe> with TickerProviderStateMixin {
               verticalReveal: notifier.slidePercentVer,
               enableSideReveal: notifier.enableSideReveal,
             ),
-            PageDragger(
-              //Used for gesture control
-              fullTransitionPX: widget.fullTransitionValue,
-              slideIconWidget: widget.slideIconWidget,
-              iconPosition: widget.positionSlideIcon,
-              ignoreUserGestureWhileAnimating:
-                  widget.ignoreUserGestureWhileAnimating,
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: 200,
+                child: PageDragger(
+                  //Used for gesture control
+                  fullTransitionPX: widget.fullTransitionValue,
+                  slideIconWidget: widget.slideIconWidget,
+                  iconPosition: widget.positionSlideIcon,
+                  ignoreUserGestureWhileAnimating:
+                      widget.ignoreUserGestureWhileAnimating,
+                ),
+              ),
             ), //PageDragger
           ], //Widget//Stack
         );
